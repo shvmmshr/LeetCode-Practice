@@ -54,6 +54,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0859-design-circular-deque](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0859-design-circular-deque) |
 | [0890-lemonade-change](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0890-lemonade-change) |
 | [0906-walking-robot-simulation](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0906-walking-robot-simulation) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/shvmmshr/LeetCode-Practice/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [0952-word-subsets](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0952-word-subsets) |
 | [1002-maximum-width-ramp](https://github.com/shvmmshr/CrackYourPlacement/tree/master/1002-maximum-width-ramp) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/shvmmshr/CrackYourPlacement/tree/master/1016-subarray-sums-divisible-by-k) |
@@ -210,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0632-smallest-range-covering-elements-from-k-lists](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0632-smallest-range-covering-elements-from-k-lists) |
 | [0906-walking-robot-simulation](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0906-walking-robot-simulation) |
 | [0920-uncommon-words-from-two-sentences](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0920-uncommon-words-from-two-sentences) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/shvmmshr/LeetCode-Practice/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [0952-word-subsets](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0952-word-subsets) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/shvmmshr/CrackYourPlacement/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1044-find-common-characters](https://github.com/shvmmshr/CrackYourPlacement/tree/master/1044-find-common-characters) |
@@ -613,6 +615,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0169-majority-element) |
 | [0191-number-of-1-bits](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0191-number-of-1-bits) |
 | [0215-kth-largest-element-in-an-array](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0215-kth-largest-element-in-an-array) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/shvmmshr/LeetCode-Practice/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 ## Counting
 |  |
 | ------- |
@@ -791,6 +794,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0776-n-ary-tree-postorder-traversal](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [0783-search-in-a-binary-search-tree](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0783-search-in-a-binary-search-tree) |
 | [0904-leaf-similar-trees](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0904-leaf-similar-trees) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/shvmmshr/LeetCode-Practice/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [0975-range-sum-of-bst](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0975-range-sum-of-bst) |
 | [0988-flip-equivalent-binary-trees](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0988-flip-equivalent-binary-trees) |
 | [1116-maximum-level-sum-of-a-binary-tree](https://github.com/shvmmshr/CrackYourPlacement/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
@@ -864,6 +868,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0617-merge-two-binary-trees](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0617-merge-two-binary-trees) |
 | [0783-search-in-a-binary-search-tree](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0783-search-in-a-binary-search-tree) |
 | [0904-leaf-similar-trees](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0904-leaf-similar-trees) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/shvmmshr/LeetCode-Practice/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [0975-range-sum-of-bst](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0975-range-sum-of-bst) |
 | [0988-flip-equivalent-binary-trees](https://github.com/shvmmshr/CrackYourPlacement/tree/master/0988-flip-equivalent-binary-trees) |
 | [1116-maximum-level-sum-of-a-binary-tree](https://github.com/shvmmshr/CrackYourPlacement/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
