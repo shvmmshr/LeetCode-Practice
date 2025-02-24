@@ -1,66 +1,59 @@
 class Solution {
 public:
-int helper(vector<vector<int>>&adj,vector<int>&path,vector<int>&amount,vector<bool>&visited,int node,int time)
-{
-    int sum=0;
-    visited[node]=1;
-    if(path[node]==-1 || path[node]>time)
-    sum+=amount[node];
-    else if(path[node]==time)
-    sum+=(amount[node]/2);
-    int sum1=INT_MIN;
-    for(int i=0;i<adj[node].size();i++)
-    {
-        if(!visited[adj[node][i]])
-        sum1=max(sum1,helper(adj,path,amount,visited,adj[node][i],time+1));
-    }
-    if(sum1!=INT_MIN)
-    sum+=sum1;
-    return sum;
-}
-    int mostProfitablePath(vector<vector<int>>& edges, int bob, vector<int>& amount) {
-        int n=edges.size()+1;
-        vector<int>bpath;
-        vector<vector<int>>adj(n);
-        for(vector<int>i:edges)
-        {
-            adj[i[0]].push_back(i[1]);
-            adj[i[1]].push_back(i[0]);
+    int dfs(vector<vector<int>>& adj, vector<int>& p, vector<int>& amt, vector<bool>& vis, int u, int t) {
+        int sum = 0;
+        vis[u] = 1;
+        if (p[u] == -1 || p[u] > t) sum += amt[u];
+        else if (p[u] == t) sum += (amt[u] / 2);
+        
+        int res = INT_MIN;
+        for (int v : adj[u]) {
+            if (!vis[v]) res = max(res, dfs(adj, p, amt, vis, v, t + 1));
         }
-        queue<int>q;
-        vector<bool>visited(n,0);
-        vector<int>parent(n,-1);
+        
+        if (res != INT_MIN) sum += res;
+        return sum;
+    }
+
+    int mostProfitablePath(vector<vector<int>>& edges, int bob, vector<int>& amount) {
+        int n = edges.size() + 1;
+        vector<int> bp;
+        vector<vector<int>> adj(n);
+        
+        for (auto& e : edges) {
+            adj[e[0]].push_back(e[1]);
+            adj[e[1]].push_back(e[0]);
+        }
+        
+        queue<int> q;
+        vector<bool> vis(n, 0);
+        vector<int> par(n, -1);
         q.push(0);
-        visited[0]=1;
-        while(!q.empty())
-        {
-            int node=q.front();
+        vis[0] = 1;
+        
+        while (!q.empty()) {
+            int u = q.front();
             q.pop();
-            for(int i=0;i<adj[node].size();i++)
-            {
-                if(visited[adj[node][i]])
-                continue;
-                visited[adj[node][i]]=1;
-                parent[adj[node][i]]=node;
-                q.push(adj[node][i]);
-                if(adj[node][i]==bob)
-                {
-                    int temp=adj[node][i];
-                    while(temp!=-1)
-                    {
-                        bpath.push_back(temp);
-                        temp=parent[temp];
+            for (int v : adj[u]) {
+                if (vis[v]) continue;
+                vis[v] = 1;
+                par[v] = u;
+                q.push(v);
+                if (v == bob) {
+                    int temp = v;
+                    while (temp != -1) {
+                        bp.push_back(temp);
+                        temp = par[temp];
                     }
-                   break;
+                    break;
                 }
             }
-            if(bpath.size())
-            break;
+            if (bp.size()) break;
         }
-        vector<int>path(n,-1);
-        for(int i=0;i<bpath.size();i++)
-        path[bpath[i]]=i;
-        fill(visited.begin(),visited.end(),0);
-        return helper(adj,path,amount,visited,0,0);
+        
+        vector<int> p(n, -1);
+        for (int i = 0; i < bp.size(); i++) p[bp[i]] = i;
+        fill(vis.begin(), vis.end(), 0);
+        return dfs(adj, p, amount, vis, 0, 0);
     }
 };
