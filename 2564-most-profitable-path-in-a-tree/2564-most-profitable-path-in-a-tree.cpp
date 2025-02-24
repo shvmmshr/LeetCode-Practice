@@ -1,62 +1,66 @@
-class graph
-{
-    public:
-    unordered_map<int,list<int>> g;
-    int bob;
-    vector<int> amount;
-    unordered_map<int,bool> vis;
-    stack<int> s;
-    graph(unordered_map<int,list<int>>& adj,int bb,vector<int>& amt)
-    {
-        this->g=adj;
-        this->bob=bb;
-        this->amount=amt;
-    }
-    int profit(int node)
-    {
-        s.push(node);
-        vis[node]=true;
-        if(node==bob)
-        {
-            int size=s.size();
-            for(int i=0;i<size/2;i++)
-            {
-                amount[s.top()]=0;
-                s.pop();
-            }
-            if(size%2==1)
-            {
-                amount[s.top()]/=2;
-            }
-            while(s.size()<size)
-            {
-                s.push(0);
-            }
-        }
-        int ans=INT_MIN;
-        for(int nbr:g[node])
-        {
-            if(!vis[nbr])
-            {
-                ans=max(ans,profit(nbr));
-            }
-        }
-        if(ans==INT_MIN) ans=0;
-        s.pop();
-        return ans+amount[node];
-    }
-};
 class Solution {
 public:
+int helper(vector<vector<int>>&adj,vector<int>&path,vector<int>&amount,vector<bool>&visited,int node,int time)
+{
+    int sum=0;
+    visited[node]=1;
+    if(path[node]==-1 || path[node]>time)
+    sum+=amount[node];
+    else if(path[node]==time)
+    sum+=(amount[node]/2);
+    int sum1=INT_MIN;
+    for(int i=0;i<adj[node].size();i++)
+    {
+        if(!visited[adj[node][i]])
+        sum1=max(sum1,helper(adj,path,amount,visited,adj[node][i],time+1));
+    }
+    if(sum1!=INT_MIN)
+    sum+=sum1;
+    return sum;
+}
     int mostProfitablePath(vector<vector<int>>& edges, int bob, vector<int>& amount) {
-        unordered_map<int,list<int>> adj;
-        for(int i=0;i<edges.size();i++)
+        int n=edges.size()+1;
+        vector<int>bpath;
+        vector<vector<int>>adj(n);
+        for(vector<int>i:edges)
         {
-            int u=edges[i][0],v=edges[i][1];
-            adj[u].push_back(v);
-            adj[v].push_back(u);
+            adj[i[0]].push_back(i[1]);
+            adj[i[1]].push_back(i[0]);
         }
-        graph ob(adj,bob,amount);
-        return ob.profit(0);
+        queue<int>q;
+        vector<bool>visited(n,0);
+        vector<int>parent(n,-1);
+        q.push(0);
+        visited[0]=1;
+        while(!q.empty())
+        {
+            int node=q.front();
+            q.pop();
+            for(int i=0;i<adj[node].size();i++)
+            {
+                if(visited[adj[node][i]])
+                continue;
+                visited[adj[node][i]]=1;
+                parent[adj[node][i]]=node;
+                q.push(adj[node][i]);
+                if(adj[node][i]==bob)
+                {
+                    int temp=adj[node][i];
+                    while(temp!=-1)
+                    {
+                        bpath.push_back(temp);
+                        temp=parent[temp];
+                    }
+                   break;
+                }
+            }
+            if(bpath.size())
+            break;
+        }
+        vector<int>path(n,-1);
+        for(int i=0;i<bpath.size();i++)
+        path[bpath[i]]=i;
+        fill(visited.begin(),visited.end(),0);
+        return helper(adj,path,amount,visited,0,0);
     }
 };
