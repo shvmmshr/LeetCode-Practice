@@ -420,6 +420,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2891-maximum-beauty-of-an-array-after-applying-operation](https://github.com/shvmmshr/CrackYourPlacement/tree/master/2891-maximum-beauty-of-an-array-after-applying-operation) |
 | [3267-find-longest-special-substring-that-occurs-thrice-i](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3267-find-longest-special-substring-that-occurs-thrice-i) |
 | [3380-shortest-subarray-with-or-at-least-k-ii](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3380-shortest-subarray-with-or-at-least-k-ii) |
+| [3761-maximum-difference-between-even-and-odd-frequency-ii](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3761-maximum-difference-between-even-and-odd-frequency-ii) |
 ## Prefix Sum
 |  |
 | ------- |
@@ -445,6 +446,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2691-count-vowel-strings-in-ranges](https://github.com/shvmmshr/CrackYourPlacement/tree/master/2691-count-vowel-strings-in-ranges) |
 | [3427-special-array-ii](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3427-special-array-ii) |
 | [3731-sum-of-variable-length-subarrays](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3731-sum-of-variable-length-subarrays) |
+| [3761-maximum-difference-between-even-and-odd-frequency-ii](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3761-maximum-difference-between-even-and-odd-frequency-ii) |
 ## String
 |  |
 | ------- |
@@ -536,6 +538,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3451-string-compression-iii](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3451-string-compression-iii) |
 | [3455-minimum-length-of-string-after-operations](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3455-minimum-length-of-string-after-operations) |
 | [3753-maximum-difference-between-even-and-odd-frequency-i](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3753-maximum-difference-between-even-and-odd-frequency-i) |
+| [3761-maximum-difference-between-even-and-odd-frequency-ii](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3761-maximum-difference-between-even-and-odd-frequency-ii) |
 ## Stack
 |  |
 | ------- |
@@ -1052,6 +1055,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2170-count-number-of-maximum-bitwise-or-subsets](https://github.com/shvmmshr/CrackYourPlacement/tree/master/2170-count-number-of-maximum-bitwise-or-subsets) |
+| [3761-maximum-difference-between-even-and-odd-frequency-ii](https://github.com/shvmmshr/CrackYourPlacement/tree/master/3761-maximum-difference-between-even-and-odd-frequency-ii) |
 ## Database
 |  |
 | ------- |
